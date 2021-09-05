@@ -13,17 +13,17 @@ build:
     - "omegaconf==2.1.1"
     - "regex==2021.8.28"
     - "ftfy==6.0.3"
-    - "tqdm==4.21.0"
+    - "tqdm==4.43.0"
     - "easydict==1.9"
     - "kornia==0.5.10"
     - "imageio-ffmpeg==0.4.5"
     - "einops==0.3.2"
     - "torch-optimizer==0.1.0"
     - "braceexpand==0.1.7"
-    pre_install:
-      - git clone https://github.com/openai/CLIP
-      - git clone https://github.com/CompVis/taming-transformers.git
-      - pip install git+https://github.com/pvigier/perlin-numpy
+  pre_install:
+    - git clone https://github.com/openai/CLIP
+    - git clone https://github.com/CompVis/taming-transformers.git
+    - pip install git+https://github.com/pvigier/perlin-numpy
 
 predict: "predict.py:Predictor"
 
