@@ -1,5 +1,5 @@
 build:
-#  gpu: true
+  gpu: true
   python_version: "3.8"
   system_packages:
     - "libgl1-mesa-glx"
@@ -20,8 +20,12 @@ build:
     - "einops==0.3.2"
     - "torch-optimizer==0.1.0"
     - "braceexpand==0.1.7"
+    - "imageio==2.9.0"
+    - "opencv-python==4.5.3.56"
+    - "taming-transformers==0.0.1"
   pre_install:
     - git clone https://github.com/openai/CLIP
+    - pip install -e ./CLIP
     - git clone https://github.com/CompVis/taming-transformers.git
     - pip install git+https://github.com/pvigier/perlin-numpy
 
